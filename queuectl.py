@@ -215,9 +215,3 @@ def dlq_retry(job_id: str):
     conn.commit()
     conn.close()
     print(f"🔁 Retried DLQ job {row['id']}")
-
-# ------------------------ CLI / Worker ------------------------
-# All CLI and worker functions remain as in your code with above fixes.
-
-# To keep the response concise, the main CLI handling (argparse) and worker_process can remain unchanged.
-# The key fixes are: DLQ retry lookup, backoff calculation, safe enqueue, and Windows worker stop instructions.
